@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Welcome Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="home_style.css">
+  <link rel="stylesheet" href="js/jquery.mobile-1.4.5.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.5.js"></script>
+	<script src="cordova.js"></script>
+	<script src="https://kit.fontawesome.com/c15eadb72f.js" crossorigin="anonymous"></script>
+	<link href='//fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+	<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+<div id="page1" data-role="page" data-prev="" data-next="#page2">
+    <!-- <div data-role="header" data-position='relative'>
+         <h3>Slide Back and Forth to view images</h3>
+    </div> -->
+    <div data-role="content"  class="ui-content" id="img1" style="height:500px; width: 100%;">
+        <img src="images/teen_pregnancy.jpg" width="75%" height="auto">
+    </div>
+</div>
+
+<div id="page2" data-role="page" data-prev="#page1" data-next="#page3">
+    <!-- <div data-role="header" data-position='fixed'>
+         <h3>Slide Back and Forth to view images</h3>
+    </div> -->
+    <div data-role="content"  class="ui-content" id="img2" style="height:500px; width: 100%;">
+
+        <img src="images/child.jpg" width="75%" height="auto">
+    </div>
+</div>
+
+<div id="page3" data-role="page" data-prev="#page2" data-next="">
+    <!-- <div data-role="header" data-position='fixed'>
+         <h3>Slide Back and Forth to view images</h3>
+    </div> -->
+    <div data-role="content" id="img3" style="height:500px; width: 100%;">
+        <img src="images/parent.jpg" width="75%" height="auto">
+    </div>
+</div>
+
+
+
+
+<script>
+
+function navnext( next ) {
+    $( ":mobile-pagecontainer" ).pagecontainer( "change", next, {
+        transition: "slide"
+    });
+}
+function navprev( prev ) {
+    $( ":mobile-pagecontainer" ).pagecontainer( "change", prev, {
+        transition: "slide",
+        reverse: true
+    });
+}
+
+
+$( document ).one( "pagecreate", "#page1", function() {
+    // Handler for navigating to the next page
+    // Navigate to the next page on swipeleft
+    $( document ).on( "swipeleft", ".ui-page", function( event ) {
+        // Get the filename of the next page. We stored that in the data-next
+        // attribute in the original markup.
+        var next = $( this ).jqmData( "next" );
+        if ( next ) {
+            navnext( next );
+        }
+    });
+    // The same for the navigating to the previous page
+    $( document ).on( "swiperight", ".ui-page", function( event ) {
+        var prev = $( this ).jqmData( "prev" );
+        if (prev) {
+            navprev( prev );
+        }
+    });
+});
+</script>
+
+
+
+
+
+</body>
+
+</html>

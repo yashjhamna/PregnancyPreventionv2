@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="home_style.css">
+  <link rel="stylesheet" href="js/jquery.mobile-1.4.5.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.5.js"></script>
+	<script src="cordova.js"></script>
+	<script src="https://kit.fontawesome.com/c15eadb72f.js" crossorigin="anonymous"></script>
+	<link href='//fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+	<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+
+
+
+
+
+</head>
+
+
+
+<body>
+  <!--- Page 1 --------------------------------------->
+  <div data-role="page" id="pageone" data-theme="a">
+
+    <div data-role="panel" id="myPanel">
+      <h2>Navigation</h2>
+      <p><a href="index.html"  data-ajax="false" class="ui-btn" id="nav-link">Home</a></p>
+      <p><a href="Page_About.html" data-ajax="false"class="ui-btn" id="nav-link">About Teen Pregnancy</a></p>
+        <p><a href="Page_Consequences.html" data-ajax="false" class="ui-btn" id="nav-link">Consequences</a></p>
+      <p><a href="Page_Project.html" data-ajax="false" class="ui-btn" id="nav-link">Projects and Initiatives</a></p>
+      <p><a href="Page_Parent.html" data-ajax="false" class="ui-btn" id="nav-link">Parent Resources</a></p>
+      <p><a href="Page_HealthCare.html" data-ajax="false" class="ui-btn" id="nav-link">Health Care Providers</a></p>
+        <p><a href="Page_News.html" data-ajax="false" class="ui-btn" id="nav-link">News </a></p>
+      <p><a href="Page_Media.html" data-ajax="false" class="ui-btn" id="nav-link">For Teens</a></p>
+    </div>
+    <!-- Header Page 1-->
+    <div id="header_bar" data-role="header">
+			<h1 id="header_title">Teenage Pregnancy Prevention</h1>
+<a id="panel-btn" href="#myPanel"><button class="btn" id="btn_header"><i class="fa fa-bars"></i></button></a>
+<button class="btn" id="btn_header_home"><i class="fa fa-home"></i></button>
+</div>
+
+
+<div data-role="page" id="demo-page" data-title="Inbox" data-url="demo-page">
+    <div data-role="header" data-position="fixed" data-theme="b">
+        <h1>Inbox</h1>
+        <a href="#demo-intro" data-rel="back" data-icon="carat-l" data-iconpos="notext">Back</a>
+        <a href="#" onclick="window.location.reload()" data-icon="back" data-iconpos="notext">Refresh</a>
+    </div><!-- /header -->
+    <div role="main" class="ui-content">
+        <ul id="list" class="touch" data-role="listview" data-icon="false" data-split-icon="delete">
+            <li>
+                <a href="#demo-mail">
+                    <h3>Avery Walker</h3>
+                    <p class="topic"><strong>Re: Dinner Tonight</strong></p>
+                    <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait! </p>
+                    <p class="ui-li-aside"><strong>4:48</strong>PM</p>
+                </a>
+                <a href="#" class="delete">Delete</a>
+            </li>
+            <li>
+                <a href="#demo-mail">
+                    <h3>Amazon.com</h3>
+                    <p class="topic"><strong>4-for-3 Books for Kids</strong></p>
+                    <p>As someone who has purchased children's books from our 4-for-3 Store, you may be interested in these featured books.</p>
+                    <p class="ui-li-aside"><strong>4:37</strong>PM</p>
+                </a>
+                <a href="#" class="delete">Delete</a>
+            </li>
+            <li>
+                <a href="#demo-mail">
+                    <h3>Mike Taylor</h3>
+                    <p class="topic"><strong>Re: This weekend in Maine</strong></p>
+                    <p>Hey little buddy, sorry but I can't make it up to vacationland this weekend. Maybe next weekend?</p>
+                    <p class="ui-li-aside"><strong>3:24</strong>PM</p>
+                </a>
+                <a href="#" class="delete">Delete</a>
+            </li>
+            <li>
+                <a href="#demo-mail">
+                    <h3>Redfin</h3>
+                    <p class="topic"><strong>Redfin listing updates for today</strong></p>
+                    <p>There are 3 updates for the home on your watchlist: 1 updated MLS listing and 2 homes under contract.</p>
+                    <p class="ui-li-aside"><strong>2:52</strong>PM</p>
+                </a>
+                <a href="#" class="delete">Delete</a>
+            </li>
+            <li>
+                <a href="#demo-mail">
+                    <h3>Angela Smith</h3>
+                    <p class="topic"><strong>Link Request</strong></p>
+                    <p>My name is Angela Smith, SEO Consultant. I've greatly enjoyed looking through your site and I was wondering if you'd be interested in providing a link</p>
+                    <p class="ui-li-aside"><strong>1:24</strong>PM</p>
+                </a>
+                <a href="#" class="delete">Delete</a>
+            </li>
+            <li>
+                <a href="#demo-mail">
+                    <h3>Stephen Weber</h3>
+                    <p class="topic"><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+                    <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
+                    <p class="ui-li-aside"><strong>11:24</strong>AM</p>
+                </a>
+                <a href="#" class="delete">Delete</a>
+            </li>
+            <li>
+                <a href="#demo-mail">
+                    <h3>jQuery Team</h3>
+                    <p class="topic"><strong>Boston Conference Planning</strong></p>
+                    <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
+                    <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+                </a>
+                <a href="#" class="delete">Delete</a>
+            </li>
+            <li>
+                <a href="#demo-mail">
+                    <h3>Avery Walker</h3>
+                    <p class="topic"><strong>Re: Dinner Tonight</strong></p>
+                    <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait! </p>
+                    <p class="ui-li-aside"><strong>4:48</strong>PM</p>
+                </a>
+                <a href="#" class="delete">Delete</a>
+            </li>
+            <li>
+                <a href="#demo-mail">
+                    <h3>Amazon.com</h3>
+                    <p class="topic"><strong>4-for-3 Books for Kids</strong></p>
+                    <p>As someone who has purchased children's books from our 4-for-3 Store, you may be interested in these featured books.</p>
+                    <p class="ui-li-aside"><strong>4:37</strong>PM</p>
+                </a>
+                <a href="#" class="delete">Delete</a>
+            </li>
+            <li>
+                <a href="#demo-mail">
+                    <h3>Mike Taylor</h3>
+                    <p class="topic"><strong>Re: This weekend in Maine</strong></p>
+                    <p>Hey little buddy, sorry but I can't make it up to vacationland this weekend. Maybe next weekend?</p>
+                    <p class="ui-li-aside"><strong>3:24</strong>PM</p>
+                </a>
+                <a href="#" class="delete">Delete</a>
+            </li>
+            <li>
+                <a href="#demo-mail">
+                    <h3>Redfin</h3>
+                    <p class="topic"><strong>Redfin listing updates for today</strong></p>
+                    <p>There are 3 updates for the home on your watchlist: 1 updated MLS listing and 2 homes under contract.</p>
+                    <p class="ui-li-aside"><strong>2:52</strong>PM</p>
+                </a>
+                <a href="#" class="delete">Delete</a>
+            </li>
+            <li>
+                <a href="#demo-mail">
+                    <h3>Angela Smith</h3>
+                    <p class="topic"><strong>Link Request</strong></p>
+                    <p>My name is Angela Smith, SEO Consultant. I've greatly enjoyed looking through your site and I was wondering if you'd be interested in providing a link</p>
+                    <p class="ui-li-aside"><strong>1:24</strong>PM</p>
+                </a>
+                <a href="#" class="delete">Delete</a>
+            </li>
+            <li>
+                <a href="#demo-mail">
+                    <h3>Stephen Weber</h3>
+                    <p class="topic"><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+                    <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
+                    <p class="ui-li-aside"><strong>11:24</strong>AM</p>
+                </a>
+                <a href="#" class="delete">Delete</a>
+            </li>
+            <li>
+                <a href="#demo-mail">
+                    <h3>jQuery Team</h3>
+                    <p class="topic"><strong>Boston Conference Planning</strong></p>
+                    <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
+                    <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+                </a>
+                <a href="#" class="delete">Delete</a>
+            </li>
+        </ul>
+    </div><!-- /content -->
+    <div id="confirm" class="ui-content" data-role="popup" data-theme="a">
+        <p id="question">Are you sure you want to delete:</p>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <a id="yes" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Yes</a>
+            </div>
+            <div class="ui-block-b">
+                <a id="cancel" class="ui-btn ui-corner-all ui-mini ui-btn-a" data-rel="back">Cancel</a>
+            </div>
+        </div>
+    </div><!-- /popup -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$( document ).on( "pagecreate", "#demo-page", function() {
+    // Swipe to remove list item
+    $( document ).on( "swipeleft swiperight", "#list li", function( event ) {
+        var listitem = $( this ),
+            // These are the classnames used for the CSS transition
+            dir = event.type === "swipeleft" ? "left" : "right",
+            // Check if the browser supports the transform (3D) CSS transition
+            transition = $.support.cssTransform3d ? dir : false;
+            confirmAndDelete( listitem, transition );
+    });
+    // If it's not a touch device...
+    if ( ! $.mobile.support.touch ) {
+        // Remove the class that is used to hide the delete button on touch devices
+        $( "#list" ).removeClass( "touch" );
+        // Click delete split-button to remove list item
+        $( ".delete" ).on( "click", function() {
+            var listitem = $( this ).parent( "li" );
+            confirmAndDelete( listitem );
+        });
+    }
+    function confirmAndDelete( listitem, transition ) {
+        // Highlight the list item that will be removed
+        listitem.children( ".ui-btn" ).addClass( "ui-btn-active" );
+        // Inject topic in confirmation popup after removing any previous injected topics
+        $( "#confirm .topic" ).remove();
+        listitem.find( ".topic" ).clone().insertAfter( "#question" );
+        // Show the confirmation popup
+        $( "#confirm" ).popup( "open" );
+        // Proceed when the user confirms
+        $( "#confirm #yes" ).on( "click", function() {
+            // Remove with a transition
+            if ( transition ) {
+                listitem
+                    // Add the class for the transition direction
+                    .addClass( transition )
+                    // When the transition is done...
+                    .on( "webkitTransitionEnd transitionend otransitionend", function() {
+                        // ...the list item will be removed
+                        listitem.remove();
+                        // ...the list will be refreshed and the temporary class for border styling removed
+                        $( "#list" ).listview( "refresh" ).find( ".border-bottom" ).removeClass( "border-bottom" );
+                    })
+                    // During the transition the previous button gets bottom border
+                    .prev( "li" ).children( "a" ).addClass( "border-bottom" )
+                    // Remove the highlight
+                    .end().end().children( ".ui-btn" ).removeClass( "ui-btn-active" );
+            }
+            // If it's not a touch device or the CSS transition isn't supported just remove the list item and refresh the list
+            else {
+                listitem.remove();
+                $( "#list" ).listview( "refresh" );
+            }
+        });
+        // Remove active state and unbind when the cancel button is clicked
+        $( "#confirm #cancel" ).on( "click", function() {
+            listitem.children( ".ui-btn" ).removeClass( "ui-btn-active" );
+            $( "#confirm #yes" ).off();
+        });
+    }
+});
+
+</script>
+
+
+
+
+</body>
+
+</html>

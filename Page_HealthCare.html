@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Health Care Centres</title>
+
+
+  <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin=""/>
+
+
+          <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+          integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+          crossorigin=""></script>
+
+	<link rel="stylesheet" href="home_style.css">
+  <link rel="stylesheet" href="js/jquery.mobile-1.4.5.css">
+
+
+  <!-- <link rel="stylesheet" href="leaflet.css"/> -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.5.js"></script>
+	<script src="cordova.js"></script>
+  <!-- <script src="leaflet.js"></script> -->
+
+
+
+	<script src="https://kit.fontawesome.com/c15eadb72f.js" crossorigin="anonymous"></script>
+	<link href='//fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+	<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <!--- Page 1 --------------------------------------->
+  <div data-role="page"  data-theme="a">
+
+    <div data-role="panel" id="myPanel">
+      <h2>Navigation</h2>
+      <p><a href="index.html"  data-ajax="false" class="ui-btn" id="nav-link">Home</a></p>
+      <p><a href="Page_About.html" data-ajax="false"class="ui-btn" id="nav-link">About Teen Pregnancy</a></p>
+      <p><a href="Page_Consequences.html" data-ajax="false" class="ui-btn" id="nav-link">Consequences</a></p>
+      <p><a href="Page_Project.html" data-ajax="false" class="ui-btn" id="nav-link">Projects and Initiatives</a></p>
+      <p><a href="Page_Parent.html" data-ajax="false" class="ui-btn" id="nav-link">Parent Resources</a></p>
+      <p><a href="Page_HealthCare.html" data-ajax="false" class="ui-btn" id="nav-link">Health Care Providers</a></p>
+        <p><a href="Page_News.html" data-ajax="false" class="ui-btn" id="nav-link">News </a></p>
+      <p><a href="Page_Media.html" data-ajax="false" class="ui-btn" id="nav-link">For Teens</a></p>
+    </div>
+
+
+    <div id="header_bar" data-role="header">
+			<h1 id="header_title">Teenage Pregnancy Prevention</h1>
+      <a id="panel-btn" href="#myPanel"><button class="btn" id="btn_header"><i class="fa fa-bars"></i></button></a>
+      <button href="index.html" class="btn" data-ajax="false" id="btn_header_home"><i class="fa fa-home"></i></button>
+    </div>
+
+
+    <div id="mapid" style="height: 500px; width:75%; "></div>
+
+    <script>
+    var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    	maxZoom: 18,
+    	id: 'mapbox.streets',
+    	accessToken: 'pk.eyJ1IjoiZHNvbyIsImEiOiJjazJuaWp1OGMwZHZhM21udnkxdmttdXIzIn0.2t2duvdmrpWsmhk1-o5zxg'
+    }).addTo(mymap);
+
+    var marker = L.marker([51.5, -0.09]).addTo(mymap);
+
+    var circle = L.circle([51.508, -0.11], {
+    	color: 'red',
+    	fillColor: '#f03',
+    	fillOpacity: 0.5,
+    	radius: 500
+    }).addTo(mymap);
+
+    var polygon = L.polygon([
+    	[51.509, -0.08],
+    	[51.503, -0.06],
+    	[51.51, -0.047]
+    ]).addTo(mymap);
+
+
+    marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+    circle.bindPopup("I am a circle.");
+    polygon.bindPopup("I am a polygon.");
+
+    var popup = L.popup()
+    	.setLatLng([51.5, -0.09])
+    	.setContent("I am a standalone popup.")
+    	.openOn(mymap);
+
+
+      function onMapClick(e) {
+      	alert("You clicked the map at " + e.latlng);
+      }
+
+      mymap.on('click', onMapClick);
+
+
+
+      var popup = L.popup();
+
+    function onMapClick(e) {
+    	popup
+    		.setLatLng(e.latlng)
+    		.setContent("You clicked the map at " + e.latlng.toString())
+    		.openOn(mymap);
+    }
+
+    mymap.on('click', onMapClick);
+
+    </script>
+
+
+
+
+  </div>
+
+
+
+
+
+</body>
+
+</html>
